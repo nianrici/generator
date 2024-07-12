@@ -1,0 +1,14 @@
+#+title: README
+#+author: Nicolas Riquelme
+#+date: 12/07/2024
+* Descripción:
+La aplicación es un procesador de documentos en Python que automatiza la sustitución de etiquetas en archivos .docx. Lee un archivo fuente con etiquetas y contenido, luego reemplaza esas etiquetas en un segundo archivo, generando un nuevo documento. Utiliza python-docx para manejar archivos .docx y es capaz de transferir tanto texto como imágenes.
+
+La he creado usando Claude 3.5 Sonnet, a la primera y sin usar un *System Prompt* para prepararlo.
+** El Prompt en cuestión:
+
+#+BEGIN_QUOTE
+Necesito que generes código en Python de manera súper eficiente y sin errores. Necesito hacer una aplicación en python que dados dos archivos en formato .docx. Primero deberá abrir el primer archivo, el cual contendrá una tabla con 2 columnas y un número indeterminado de filas. En la columna de la izquierda habrán etiquetas con formato <foo> y en la de la Izquierda texto o imágenes. Deberá copiar el texto a la derecha de la etiqueta, abrir el segundo archivo, buscar dentro la etiqueta correspondiente y reemplazarla por el texto o imágenes copiados. Una vez reemplazadas todas las etiquetas del segundo archivo, deberá guardar una cópia que se llame generado.docx. Para trabajar con los documentos con extensión .docx deberás usar la librería python-docx. Para el resto, lo dejo a tu elección.
+#+END_QUOTE
+
+Como en todos los prompts, he intentado ser lo más explícito posible, evitando usar frases demasiado largas o rebuscadas. La primera frase es para dar contexto y la última, para darle margen de movimiento, ya que como no soy desarrollador, es muy posible que haya algo que la IA sepa y que a mi se me pueda haber pasado por alto al pensar el prompt.
